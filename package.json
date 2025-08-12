@@ -1,0 +1,19 @@
+{
+  "name": "my-flask-app",
+  "version": "1.0.0",
+  "description": "A simple Flask web application with login functionality and Playwright testing.",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2"
+  }
+}
