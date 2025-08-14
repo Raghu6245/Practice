@@ -39,3 +39,6 @@ yarn-error.log*
 
 # Repo directory created by MCP server
 repo/
+
+# Application data
+users.json

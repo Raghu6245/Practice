@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Login - My Flask App</title>
+  <title>Register - My Flask App</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
@@ -25,11 +25,11 @@
       border-radius: 4px; box-sizing: border-box;
     }
     .btn {
-      width: 100%; padding: 12px; background-color: #007bff;
+      width: 100%; padding: 12px; background-color: #28a745;
       color: white; border: none; border-radius: 4px;
       cursor: pointer; font-size: 16px; margin-bottom: 10px;
     }
-    .btn:hover { background-color: #0056b3; }
+    .btn:hover { background-color: #218838; }
     .btn-secondary {
       background-color: #6c757d; text-decoration: none;
       display: inline-block; text-align: center;
@@ -46,20 +46,16 @@
       color: #155724; background-color: #d4edda;
       border: 1px solid #c3e6cb;
     }
-    .alert-info {
-      color: #0c5460; background-color: #d1ecf1;
-      border: 1px solid #bee5eb;
-    }
-    .demo-info {
-      margin-top: 20px; padding: 15px; background-color: #f8f9fa;
-      border-radius: 4px; font-size: 14px;
+    .requirements {
+      font-size: 12px; color: #666;
+      margin-top: 5px;
     }
     .text-center { text-align: center; }
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>Login</h2>
+    <h2>Create Account</h2>
     
     {% with messages = get_flashed_messages(with_categories=true) %}
       {% if messages %}
@@ -80,19 +76,19 @@
       </div>
       
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
       </div>
       
-      <button type="submit" class="btn">Login</button>
-      <a href="{{ url_for('register') }}" class="btn btn-secondary">Create Account</a>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <div class="requirements">Minimum 6 characters</div>
+      </div>
+      
+      <button type="submit" class="btn">Create Account</button>
+      <a href="{{ url_for('login') }}" class="btn btn-secondary">Back to Login</a>
     </form>
-    
-    <div class="demo-info">
-      <strong>Demo Account:</strong><br>
-      Username: testuser<br>
-      Password: pass123
-    </div>
   </div>
 </body>
 </html>
